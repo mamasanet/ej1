@@ -33,7 +33,7 @@ for fila in reader:
     mail3.crearCuenta(fila[0])
     lista.append(mail3)
 
-print(lista[0].getdom())
+print(lista[0].getdom()) # para ver si funcionaba
 for i in range(len(lista)):
     if lista[i].getdom()==dom:
         conta+=1
