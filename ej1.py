@@ -29,8 +29,8 @@ dom = input("ingrese un dominio: ")
 lista = []
 #test
 for fila in reader:
-    mail3=email(fila[0],fila[1],fila[2])
-    mail3.crearCuenta(mail3.retornamail())
+    mail3=email()
+    mail3.crearCuenta(fila[0])
     lista.append(mail3)
 
 print(lista[0].getdom())
