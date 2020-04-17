@@ -12,6 +12,7 @@ class email:
     def retornamail(self):
         cadenas = self.__idcuenta + '@' + self.__dominio + '.' + self.__tipodom
         return cadenas
+    #   return self.__idcuenta + '@' + self.__dominio + '.' + self.__tipodom
 
     def getdom(self):
        return self.__dominio
@@ -25,6 +26,7 @@ class email:
         grupo = re.search(r'([a-zA-Z0-9/-_]+)@([a-zA-Z0-9/-]+).([a-z]+)', correo)
         if (type(grupo)==re.Match):
            self.__init__(grupo.group(1),grupo.group(2),grupo.group(3),pass2)
+           #no llames al constuctor directamente, actualiza los valores de los atributos 
         else:
             print("usted ingreso un correo invalido")
 
